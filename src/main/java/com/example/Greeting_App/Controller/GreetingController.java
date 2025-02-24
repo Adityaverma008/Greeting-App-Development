@@ -1,5 +1,6 @@
 package com.example.Greeting_App.Controller;
 
+import com.example.Greeting_App.Entity.Greeting;
 import com.example.Greeting_App.Service.GreetingService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -43,5 +44,12 @@ public String getGreeting(@RequestParam(required = false) String firstName,
                           @RequestParam(required = false) String lastName) {
     return "{\"message\": \"" + greetingService.getGreetingMessage(firstName, lastName) + "\"}";
 }
+
+//uc4 codefiles
+
+    @PostMapping("/save")
+    public Greeting saveGreeting(@RequestBody String message) {
+        return greetingService.saveGreeting(message);
+    }
 
 }
