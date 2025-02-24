@@ -52,4 +52,11 @@ public String getGreeting(@RequestParam(required = false) String firstName,
         return greetingService.saveGreeting(message);
     }
 
+//    uc5 code files
+
+    @GetMapping("/{id}")
+    public Greeting getGreetingById(@PathVariable Long id) {
+        return greetingService.getGreetingById(id);
+    }
+
 }
