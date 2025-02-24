@@ -75,4 +75,10 @@ public String getGreeting(@RequestParam(required = false) String firstName,
         return greetingService.editGreeting(id, newMessage);
     }
 
+//    uc8 codefiles
+@DeleteMapping("/delete/{id}")
+public String deleteGreeting(@PathVariable Long id) {
+    return greetingService.deleteGreeting(id);
+}
+
 }
