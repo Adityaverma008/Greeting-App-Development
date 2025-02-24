@@ -68,4 +68,11 @@ public String getGreeting(@RequestParam(required = false) String firstName,
         return greetingService.getAllGreetings();
     }
 
+//    uc7 codefiles
+
+    @PutMapping("/edit/{id}")
+    public Greeting editGreeting(@PathVariable Long id, @RequestBody String newMessage) {
+        return greetingService.editGreeting(id, newMessage);
+    }
+
 }
