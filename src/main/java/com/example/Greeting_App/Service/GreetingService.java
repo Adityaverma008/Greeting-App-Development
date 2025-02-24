@@ -48,4 +48,12 @@ public List<Greeting> getAllGreetings() {
     return greetingRepository.findAll();
 }
 
+//UC7 codefiles
+public Greeting editGreeting(Long id, String newMessage) {
+    return greetingRepository.findById(id).map(greeting -> {
+        greeting.setMessage(newMessage);
+        return greetingRepository.save(greeting);
+    }).orElse(null);
+}
+
 }
