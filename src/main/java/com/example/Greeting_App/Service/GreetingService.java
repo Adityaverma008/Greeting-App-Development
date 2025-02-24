@@ -55,5 +55,13 @@ public Greeting editGreeting(Long id, String newMessage) {
         return greetingRepository.save(greeting);
     }).orElse(null);
 }
+//uc8 codefiles
+public String deleteGreeting(Long id) {
+    if (greetingRepository.existsById(id)) {
+        greetingRepository.deleteById(id);
+        return "Deleted successfully";
+    }
+    return "Greeting not found";
+}
 
 }
