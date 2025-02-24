@@ -18,4 +18,8 @@ public class Greeting {
 
     public Long getId() { return id; }
     public String getMessage() { return message; }
+
+//    UC7code
+    public void setMessage(String newMessage) {
+    }
 }
